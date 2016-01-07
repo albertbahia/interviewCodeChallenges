@@ -1,0 +1,86 @@
+/* Uses CSS3 and the Stylus Preprocessor */
+/* If introducing this earlier in the course, comment out Stylus-related items if Preprocessors have not been introduced yet, specifically items with the '$' */
+
+body {
+  text-align: center;
+  padding-top: 24px;
+}
+#viewport, #reference {
+  background-color: #f2f2f2;
+  width: 375px;
+  height: 667px;
+  border: 1px solid grey;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+#reference {
+  background-image: url(http://i.ralph.io/v4lhpg4h.png);
+  background-size: 375px 667px;
+}
+
+$backgroundColor = #f2f2f2;
+$borderRadius = 4px;
+
+// Pop now and On the Rise tabs
+$tabsHeight = 84px;
+$tabsTextPaddingTop = 56px;
+$tabsTextColor = #40403e;
+$tabsTextFontSize = 14px;
+$tabsTextFontWeight = 800;
+$tabsDividerWidth = 2px;
+
+$popularNowStar = 'https://vine.co/static/images/star.png';
+$onTheRiseArrow = 'https://vine.co/static/images/rising.png';
+
+// Channel header
+$channelsHeadingColor = #a6a6a4;
+$channelsHeadingFontSize = 14px;
+$channelsHeadingFontWeight = 400;
+$channelsHeadingTopMargin = 15px;
+
+// Channel cells
+$channelCellMargin = 8px;
+$channelCellHeight = $channelIconImageHeight = $channelIconImageWidth = 72px;
+
+.tabHeader {
+   height: $tabsHeight
+   margin: 0px $channelCellMargin 0px $channelCellMargin
+}
+
+.tab1 {
+  background: #fff url($popularNowStar) no-repeat scroll center;
+  background-size: 33px;
+  border-right: $tabsDividerWidth solid $backgroundColor;
+}
+
+.tab2 {
+  background: #fff url($onTheRiseArrow) no-repeat scroll center;
+  background-size: 33px;
+  border-left: $tabsDividerWidth solid $backgroundColor;
+}
+
+.tab {
+  float: left
+  width: 50%
+  height: 100%
+  box-sizing: border-box
+  padding-top: $tabsTextPaddingTop
+  color: $tabsTextColor
+  font-size: $tabsTextFontSize
+  font-weight: $tabsTextFontWeight
+  text-align: center
+  background-position: center 16px
+}
+
+.channelTitles {
+  color: $channelsHeadingColor
+  font-size: $channelsHeadingFontSize
+  font-weight: $channelsHeadingFontWeight
+  padding-top: $channelsHeadingTopMargin
+  margin: 0px $channelCellMargin 0px $channelCellMargin
+  text-align: center
+}
+.channel {
+
+}
